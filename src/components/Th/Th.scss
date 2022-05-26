@@ -1,0 +1,50 @@
+%equal-flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+table {
+  width: 100%;
+  border-spacing: 1rem;
+}
+
+th {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: #a2a2a2;
+  margin: 0 1rem;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+td {
+  font-size: 0.8rem;
+}
+
+th:not(:last-child) {
+  border-right: 1px solid #a2a2a2;
+}
+
+td.cancel,
+td.other,
+td.acceptable,
+td.alert {
+  font-size: 0.8rem;
+  border-radius: 0.5rem;
+  width: 4rem;
+  height: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  table {
+    display: none;
+  }
+}

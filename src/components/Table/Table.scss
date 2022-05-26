@@ -1,0 +1,19 @@
+%equal-flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.table-container {
+  background-color: #fff;
+  border-radius: 2rem;
+  margin: 2rem;
+
+  ul {
+    @extend %equal-flex;
+    justify-content: space-around;
+    list-style: none;
+    color: #a2a2a2;
+    padding: 0;
+  }
+}

@@ -1,0 +1,13 @@
+$font-stack: "Poppins" , sans-serif;
+$primary-color: #333;
+$background-color: #fafafa;
+
+
+body {
+  margin: 0;
+  font-family: $font-stack;
+  color: $primary-color;
+  background-color: $background-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

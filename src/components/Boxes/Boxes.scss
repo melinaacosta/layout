@@ -1,0 +1,31 @@
+@mixin boxes($boxes: rgb(255, 255, 255)) {
+  background: $boxes;
+  box-shadow: 0 0 1px rgba($boxes, 0.25);
+  color: rgb(255, 255, 255);
+  border-radius: 2rem;
+  width: 12rem;
+  height: 8rem;
+}
+
+.number {
+  font-size: 3rem;
+}
+
+// COLORS
+.alert {
+  @include boxes($boxes: rgba(222, 41, 41, 0.939));
+}
+.acceptable {
+  @include boxes($boxes: rgba(215, 186, 41, 0.924));
+}
+.other {
+  @include boxes($boxes: rgba(137, 40, 227, 0.938));
+}
+
+.cancel {
+  @include boxes($boxes: rgba(144, 144, 144, 0.938));
+}
+
+.null {
+  opacity: 20%;
+}

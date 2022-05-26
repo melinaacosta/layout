@@ -1,0 +1,26 @@
+%equal-flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.table-container {
+  li {
+    @extend %equal-flex;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 1px rgb(255 255 255 / 25%);
+    color: #828282;
+    padding: 0.4rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(210, 210, 210);
+    margin: 1rem 1rem;
+    width: 12rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+  }
+  .selected {
+    border: 2px solid rgb(15, 131, 214);
+    color: rgb(15, 131, 214);
+  }
+}

@@ -1,0 +1,72 @@
+%equal-flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin theme($theme: rgb(255, 255, 255)) {
+  background: $theme;
+  box-shadow: 0 0 1px rgba($theme, 0.25);
+  color: rgb(0, 0, 0);
+  padding: 0.6rem 3.5rem;
+  border-radius: 0.5rem;
+}
+
+.boxes-container {
+  @extend %equal-flex;
+  justify-content: space-between;
+  margin: 2rem;
+
+  div {
+    @extend %equal-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.title-container {
+  @extend %equal-flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eaeaea;
+  margin: 0 2rem;
+
+  h1 {
+    margin-left: 1rem;
+    font-size: 2rem;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.boxes-buttons {
+  i {
+    margin-left: 0.5rem;
+  }
+}
+
+// BUTTONS
+.classic {
+  @include theme;
+  border: 1px solid rgb(210, 210, 210);
+}
+.refresh {
+  @include theme($theme: rgb(15, 140, 223));
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .title-container h1 {
+    font-size: 1.5rem;
+  }
+  .boxes-container {
+    margin: 0.5rem;
+  }
+  .title-container {
+    border-bottom: none;
+    justify-content: center;
+  }
+}
